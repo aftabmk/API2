@@ -38,7 +38,7 @@ else
 //EXPRESS APP
 const app= ex()
 
-app.post(`/${path}`,async(req,res)=>
+app.get(`/${path}`,async(req,res)=>
 {
 try
 {

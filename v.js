@@ -39,7 +39,7 @@ const hh = {"headers": {"accept": "*/*","accept-language": "en-US,en;q=0.9","sec
 const app= ex()
 const port = process.env.PORT || 5000;
 
-app.get(`/${path}`,async(req,res)=>
+app.get(`/${path}`,(req,res)=>
 {
 try
 {
@@ -55,5 +55,5 @@ catch(err)
 })
 app.listen(port, () =>
 	{
-		console.log(`running on port http://localhost:500/${path}`)
+		console.log(`running on port http://localhost:5000/${path}`)
 	})

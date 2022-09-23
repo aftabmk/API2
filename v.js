@@ -37,6 +37,7 @@ else
 
 //EXPRESS APP
 const app= ex()
+const port = process.env.PORT || 5000;
 
 app.get(`/${path}`,async(req,res)=>
 {
@@ -52,7 +53,7 @@ catch(err)
     })
 }
 })
-app.listen(500, () =>
+app.listen(port, () =>
 	{
 		console.log(`running on port http://localhost:500/${path}`)
 	})

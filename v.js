@@ -3,7 +3,7 @@ const ex = require("express");
 const url= 'https://www.nseindia.com/'
 const nft= 'https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050'
 const path = 'v1'
-const index = [];
+
 const hh = {"headers": {"accept": "*/*","accept-language": "en-US,en;q=0.9","sec-fetch-dest": "empty","sec-fetch-mode": "cors","sec-fetch-site": "same-origin","sec-gpc": "1","Referrer-Policy": "strict-origin-when-cross-origin"},"body": null,"method": "GET"}
 
 f();
@@ -27,8 +27,8 @@ async function f()
     // const d1 = await r1;
     // const n1 = d1.data.data
     
-    index.push(cookie)
-    return index
+    
+    return cookie
 
 }
 else

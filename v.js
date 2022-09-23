@@ -1,8 +1,6 @@
 const ax = require("axios");
 const ex = require("express");
-// const url= process.env.URL
 const url= 'https://www.nseindia.com/'
-// const nft= process.env.URI
 const nft= 'https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050'
 const path = 'v1'
 const index = [];

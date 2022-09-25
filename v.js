@@ -23,12 +23,13 @@ async function f()
     // console.log(l)
     const h = { ...hh,Referer: url,cookie:cookie}
     // // console.log(h)
-    // const r1 = await ax.get(nft,h);
-    // const d1 = await r1;
-    // const n1 = d1.data.data
+     const r1 = await ax.get(nft,h);
+     const d1 = await r1;
+     const n1 = d1.data.data
     
     
-    return h
+    return n1
+    // return h
 
 }
 else

@@ -23,22 +23,13 @@ async function f()
     // console.log(l)
     const h = { ...hh,Referer: url,cookie:cookie}
     // // console.log(h)
-<<<<<<< HEAD
     const r1 = await ax.get(nft,h);
     const d1 = await r1;
     const n1 = d1.data.data
     
     
     return n1
-=======
-     const r1 = await ax.get(nft,h);
-     const d1 = await r1;
-     const n1 = d1.data.data
-    
-    
-    return n1
-    // return h
->>>>>>> 3c6876694a248781700c27b8d3ef76de05039925
+
 
 }
 else

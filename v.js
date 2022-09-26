@@ -12,21 +12,22 @@ async function f()
     const req = await ax.get(url);
     const data = await req;
     const head = data.headers['set-cookie']
-    console.log(head)
+    //console.log(head)
     if(head.length==4){
     const a = head[0].split(";")[0]+";";
     const b = head[1].split(";")[0]+";";
     const c = head[2].split(";")[0]+";";
     const d= head[3].split(";")[0]+";";
-    const cookie = a+b+c+d
-
-    // console.log(l)
+    const cookie = a+b+c+d;
     const h = { ...hh,Referer: url,cookie:cookie}
-    // // console.log(h)
-	     	const r1 = await ax.get(nft,h);
-     		const d1 = await r1;
-     		const n1 = d1.data.data
-    		return n1
+    console.log(h)
+     const r1 = await ax.get(nft,h);
+     const d1 = await r1;
+     const n1 = d1.data.data
+    
+    
+    return n1
+    // return h
 
 }
 else

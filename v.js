@@ -11,6 +11,30 @@ const path = 'v1'
 const hh = {"headers":{"accept": "*/*", "accept-language": "en-US,en; q=0.9","sec-fetch-dest": "empty","sec-fetch-mode": "cors","sec-fetch-site": "same-origin","sec-gpc": "1", "Referrer-Policy": "strict-origin-when-cross-origin"},"body": null, "method": "GET"}
 
 
+<<<<<<< HEAD
+=======
+async function f()
+{
+    const req = await ax.get(url);
+    const data = await req;
+    const head = data.headers['set-cookie']
+    //console.log(head)
+    if(head.length==4){
+    const a = head[0].split(";")[0]+";";
+    const b = head[1].split(";")[0]+";";
+    const c = head[2].split(";")[0]+";";
+    const d= head[3].split(";")[0]+";";
+    const cookie = a+b+c+d;
+    const h = { ...hh,Referer: url,cookie:cookie}
+    console.log(h)
+     const r1 = await ax.get(nft,h);
+     const d1 = await r1;
+     const n1 = d1.data.data
+    
+    
+    return n1
+    // return h
+>>>>>>> d46c2196599948ac099af14af2d384f65ad22687
 
 async function f() {
 

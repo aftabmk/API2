@@ -1,111 +1,107 @@
-const ax = require("axios");
+// const ax = require("axios");
 
-const ex = require("express");
+// const ex = require("express");
 
-const url = 'https://www.nseindia.com/'
+// const url = 'https://www.nseindia.com/'
 
-const nft = 'https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050'
+// const nft = 'https://www.nseindia.com/api/equity-stockIndices?index=NIFTY%2050'
 
-const path = 'v1'
+// const path = 'v1'
 
-const hh = {"headers":{"accept": "*/*", "accept-language": "en-US,en; q=0.9","sec-fetch-dest": "empty","sec-fetch-mode": "cors","sec-fetch-site": "same-origin","sec-gpc": "1", "Referrer-Policy": "strict-origin-when-cross-origin"},"body": null, "method": "GET"}
+// const hh = {"headers":{"accept": "*/*", "accept-language": "en-US,en; q=0.9","sec-fetch-dest": "empty","sec-fetch-mode": "cors","sec-fetch-site": "same-origin","sec-gpc": "1", "Referrer-Policy": "strict-origin-when-cross-origin"},"body": null, "method": "GET"}
 
-
-<<<<<<< HEAD
-=======
-async function f()
-{
-    const req = await ax.get(url);
-    const data = await req;
-    const head = data.headers['set-cookie']
-    //console.log(head)
-    if(head.length==4){
-    const a = head[0].split(";")[0]+";";
-    const b = head[1].split(";")[0]+";";
-    const c = head[2].split(";")[0]+";";
-    const d= head[3].split(";")[0]+";";
-    const cookie = a+b+c+d;
-    const h = { ...hh,Referer: url,cookie:cookie}
-    console.log(h)
-     const r1 = await ax.get(nft,h);
-     const d1 = await r1;
-     const n1 = d1.data.data
+// async function f()
+// {
+//     const req = await ax.get(url);
+//     const data = await req;
+//     const head = data.headers['set-cookie']
+//     //console.log(head)
+//     if(head.length==4){
+//     const a = head[0].split(";")[0]+";";
+//     const b = head[1].split(";")[0]+";";
+//     const c = head[2].split(";")[0]+";";
+//     const d= head[3].split(";")[0]+";";
+//     const cookie = a+b+c+d;
+//     const h = { ...hh,Referer: url,cookie:cookie}
+//     console.log(h)
+//      const r1 = await ax.get(nft,h);
+//      const d1 = await r1;
+//      const n1 = d1.data.data
     
     
-    return n1
-    // return h
->>>>>>> d46c2196599948ac099af14af2d384f65ad22687
-
-async function f() {
-
-	const req = await ax.get(url);
-
-	const data = await req;
-
-	const head = data.headers['set-cookie']
-	//console.log(head)
-
-	if (head.length == 4) {
-
-		const a = head[0].split(";")[0] + ";";
-
-		const b = head[1].split(";")[0] + ";";
-
-		const c = head[2].split(";")[0] + ";";
-
-		const d = head[3].split(";")[0] + ";";
-
-		const cookie = a + b + c + d;
-
-		const h = { ...hh, Referer: url, cookie: cookie }
-
-		console.log(h)
-
-		const r1 = await ax.get(nft, h);
-
-		const d1 = await r1;
-
-		const n1 = d1.data.data
+//     return n1
 
 
+// async function f() {
 
-		return n1
-		// return h
+// 	const req = await ax.get(url);
+
+// 	const data = await req;
+
+// 	const head = data.headers['set-cookie']
+// 	//console.log(head)
+
+// 	if (head.length == 4) {
+
+// 		const a = head[0].split(";")[0] + ";";
+
+// 		const b = head[1].split(";")[0] + ";";
+
+// 		const c = head[2].split(";")[0] + ";";
+
+// 		const d = head[3].split(";")[0] + ";";
+
+// 		const cookie = a + b + c + d;
+
+// 		const h = { ...hh, Referer: url, cookie: cookie }
+
+// 		console.log(h)
+
+// 		const r1 = await ax.get(nft, h);
+
+// 		const d1 = await r1;
+
+// 		const n1 = d1.data.data
 
 
-	}
 
-	else {
-
-		return ("cookie error")
-
-	}
-}
+// 		return n1
+// 		// return h
 
 
-//EXPRESS APP
+// 	}
 
-const app = ex()
+// 	else {
 
-const port = process.env.PORT || 5000;
+// 		return ("cookie error")
+
+// 	}
+// }
 
 
-app.get(`/${path}`, async (req, res) => {
+// //EXPRESS APP
 
-	try {
+// const app = ex()
 
-		const api = await f();
+// const port = process.env.PORT || 5000;
 
-		return res.status(200).json(api)
-	}
-	catch (err) {
-		return res.status(500).json({
-			err: err.toString(),
-		})
-	}
-})
 
-app.listen(port, () => {
-	console.log(`running on port http://localhost:5000/${path}`)
+// app.get(`/${path}`, async (req, res) => {
 
-})
+// 	try {
+
+// 		const api = await f();
+
+// 		return res.status(200).json(api)
+// 	}
+// 	catch (err) {
+// 		return res.status(500).json({
+// 			err: err.toString(),
+// 		})
+// 	}
+// })
+
+// app.listen(port, () => {
+// 	console.log(`running on port http://localhost:5000/${path}`)
+
+// })

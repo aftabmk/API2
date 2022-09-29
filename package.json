@@ -2,18 +2,16 @@
   "name": "api2",
   "version": "1.0.0",
   "description": "",
-  "main": "cheerio.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node cheerio"
+    "start": "node index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.27.2",
-    "cheerio": "^1.0.0-rc.12",
-    "express": "^4.18.1",
-    "puppeteer-extra": "^3.3.4",
-    "puppeteer-extra-plugin-stealth": "^2.11.1"
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
   }
 }

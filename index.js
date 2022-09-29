@@ -26,7 +26,7 @@ async function f()
 //EXPRESS APP
 
 const app = ex()
-
+app.use(cors())
 
 const port = process.env.PORT || 5000;
 
